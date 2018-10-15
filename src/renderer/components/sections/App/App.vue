@@ -2,7 +2,23 @@
   <div
     class="s-app"
     id="app">
-    <h1>Simple Note</h1>
+    <title-bar/>
+    <div class="s-app__body">
+      <div
+        class="s-app__blank-slate"
+        v-if="shouldShowBlankSlate">
+        <suprise-icon class="s-app__blank-slate-image"/>
+        <span class="s-app__blank-slate-text">No notes yet..</span>
+        <button
+          class="sn-button"
+          @click="onClickAddNote">Add Note</button>
+      </div>
+      <div
+        class="s-app__content"
+        v-else>
+        <app-sidebar/>
+      </div>
+    </div>
   </div>
 </template>
 <style src="../../../styles/index.scss" lang="scss"></style>

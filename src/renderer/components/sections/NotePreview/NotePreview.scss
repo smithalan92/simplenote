@@ -1,0 +1,23 @@
+@import '~styles/colours';
+
+.s-note-preview {
+    position: relative;
+    height: 70px;
+    padding: 10px 15px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $lighter-dark-grey;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $lighter-dark-grey;
+    }
+}
+
+.s-note-preview__date {
+    position: absolute;
+    right: 15px;
+    font-size: 9px;
+    color: lighten($lighter-dark-grey, 30%);
+}

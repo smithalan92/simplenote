@@ -1,0 +1,29 @@
+@import '~styles/colours';
+
+.s-menu {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    padding: 0 10px;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: $app-blue;
+}
+
+.s-menu__add-note {
+    padding: 10px 10px 0;
+    height: 100%;
+    cursor: pointer;
+
+    &:hover {
+        .icon {
+            opacity: 0.8;
+        }
+    }
+
+    .icon {
+        width: 10px;
+        height: 10px;
+        fill: $white;
+    }
+}

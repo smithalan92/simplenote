@@ -1,6 +1,45 @@
+@import '~styles/colours';
+
 .s-app {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+}
+
+.s-app__body {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.s-app__blank-slate {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .icon {
+        width: 200px;
+        height: 200px;
+        fill: $white;
+    }
+
+    .sn-button {
+        font-size: 13px;
+    }
+}
+
+.s-app__blank-slate-text {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.s-app__content {
+    height: 100%;
+    width: 100%;
+    display: flex;
 }

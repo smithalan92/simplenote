@@ -1,0 +1,9 @@
+@import '~styles/colours';
+
+.s-app-sidebar {
+    width: 180px;
+    height: 100%;
+    border-right: 1px solid $lighter-dark-grey;
+    display: flex;
+    flex-direction: column;
+}

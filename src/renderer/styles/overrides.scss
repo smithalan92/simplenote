@@ -1,0 +1,25 @@
+@import 'colours';
+
+* { //sass-lint:disable-line no-universal-selectors
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: $dark-grey;
+}
+
+body {
+    font-family: 'OpenSans', 'sans-serif';
+    font-weight: lighter;
+    color: $white;
+    line-height: 1.25;
+    font-size: 12px;
+}

@@ -397,7 +397,7 @@ eval("/**\n * This file is used specifically and only for development. It instal
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/**\n * Set `__static` path to static files in production\n * https://simulatedgreg.gitbooks.io/electron-vue/content/en/using-static-assets.html\n */\nif (false) {}\n\nconst { app } = __webpack_require__(/*! electron */ \"electron\");\nconst simpleNote = __webpack_require__(/*! ./app */ \"./src/main/app.js\");\nconst window = __webpack_require__(/*! ./Window */ \"./src/main/Window.js\");\n\n// We only want to allow a single instance of the chat app to run\n// To ensure this, we make the app a single instance when it starts starts.\n// The callback will be executed on the first instance of the app if a second\n// instance is started\nconst isSecondInstance = app.makeSingleInstance((() => {\n  window.show();\n}));\n\nif (isSecondInstance) {\n  app.quit();\n}\n\nsimpleNote.attachAppEvents();\n\n\n//# sourceURL=webpack:///./src/main/index.js?");
+eval("/**\n * Set `__static` path to static files in production\n * https://simulatedgreg.gitbooks.io/electron-vue/content/en/using-static-assets.html\n */\nif (false) {}\n\nconst { app } = __webpack_require__(/*! electron */ \"electron\");\nconst simpleNote = __webpack_require__(/*! ./app */ \"./src/main/app.js\");\nconst window = __webpack_require__(/*! ./Window */ \"./src/main/Window.js\");\n\nconst gotSingleInstanceLock = app.requestSingleInstanceLock();\n\nif (!gotSingleInstanceLock) {\n  app.quit();\n} else {\n  app.on('second-instance', () => {\n    window.show();\n  });\n}\n\nsimpleNote.attachAppEvents();\n\n\n//# sourceURL=webpack:///./src/main/index.js?");
 
 /***/ }),
 

@@ -11,16 +11,14 @@ const { app } = require('electron');
 const simpleNote = require('./app');
 const window = require('./Window');
 
-// We only want to allow a single instance of the chat app to run
-// To ensure this, we make the app a single instance when it starts starts.
-// The callback will be executed on the first instance of the app if a second
-// instance is started
-const isSecondInstance = app.makeSingleInstance((() => {
-  window.show();
-}));
+const gotSingleInstanceLock = app.requestSingleInstanceLock();
 
-if (isSecondInstance) {
+if (!gotSingleInstanceLock) {
   app.quit();
+} else {
+  app.on('second-instance', () => {
+    window.show();
+  });
 }
 
 simpleNote.attachAppEvents();

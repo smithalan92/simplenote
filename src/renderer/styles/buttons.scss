@@ -1,0 +1,21 @@
+.sn-button {
+    padding: 10px 10px;
+    background-color: rgb(6, 155, 36);
+    color: $white;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 3px;
+
+    &:hover {
+        background-color: rgb(38, 174, 65);
+    }
+}
+
+.sn-button--danger {
+    background-color: rgb(147, 7, 7);
+
+    &:hover {
+        background-color: rgb(157, 38, 38);
+    }
+}
