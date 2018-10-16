@@ -2,7 +2,7 @@
 
 .s-note-preview {
     position: relative;
-    height: 70px;
+    height: 75px;
     padding: 10px 15px 10px 10px;
     display: flex;
     flex-direction: column;
@@ -15,9 +15,22 @@
     }
 }
 
+.s-note-preview--selected {
+    background-color: $lighter-dark-grey;
+}
+
 .s-note-preview__date {
     position: absolute;
     right: 15px;
     font-size: 9px;
     color: lighten($lighter-dark-grey, 30%);
+}
+
+.s-note-preview__contents {
+    margin-top: 5px;
+    font-weight: lighter;
+    font-size: 10px;
+    white-space: pre-wrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }

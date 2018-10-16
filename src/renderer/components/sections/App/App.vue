@@ -17,6 +17,7 @@
         class="s-app__content"
         v-else>
         <app-sidebar/>
+        <note :current-note-id="currentlySelectedNote"/>
       </div>
     </div>
   </div>

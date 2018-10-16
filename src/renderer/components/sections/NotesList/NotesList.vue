@@ -6,6 +6,7 @@
       :ref="`note-${note.id}`"
       :key="note.id">
       <note-preview
+        @click="onClickNote"
         :note="note"/>
     </div>
   </div>

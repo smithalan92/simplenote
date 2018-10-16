@@ -21,5 +21,19 @@ export default {
       }
       return format(new Date(this.note.createdAt), 'MMM DD, HH:mm');
     },
+
+    contentPreview() {
+      return this.note.contents.substring(0, 120);
+    },
+
+    isCurrentlySelected() {
+      return this.$store.state.general.currentNoteId === this.note.id;
+    },
+  },
+
+  methods: {
+    onClickNote() {
+      this.$emit('click', this.note.id);
+    },
   },
 };

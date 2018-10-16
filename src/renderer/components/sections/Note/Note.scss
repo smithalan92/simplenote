@@ -1,0 +1,24 @@
+@import '~styles/colours';
+
+.s-note {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.s-note__title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.s-note__dates {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $lighter-dark-grey;
+}
+
+.s-note__contents {
+    margin-top: 10px;
+    line-height: 25px;
+}

@@ -13,4 +13,10 @@ export default {
       notes: 'notes/getNotes',
     }),
   },
+
+  methods: {
+    onClickNote(id) {
+      this.$store.dispatch('general/setCurrentNote', id);
+    },
+  },
 };
